@@ -25,6 +25,70 @@
             //The program should take a number as input and output whether the number is happy or sad
             //test your program with the inputs of 19 and 20
             //show your output in the readme file
+
+
+            Console.WriteLine("What number do you want?");
+            string num = Console.ReadLine();
+            double num2 = 0;
+            double num3 = 0;
+            string num4 = num;
+            int count = 0;
+            bool valid = true;
+            for (int i = 0; i < num.Length; i++)
+            {
+                num2 = num[i] - 48;
+                Console.WriteLine(num[i] - 48);
+                num3 = num3 + (num2 * num2);
+                Console.WriteLine(num3);
+
+            }
+            num = Convert.ToString(num3);
+            Console.WriteLine(num);
+            while (num != "1")
+            {
+                num3 = 0;
+                for (int i = 0; i < num.Length; i++)
+                {
+
+                    num2 = num[i] - 48;
+                    Console.WriteLine(num2);
+                    num3 = num3 + (num2 * num2);
+                    Console.WriteLine(num3);
+
+                }
+                num = Convert.ToString(num3);
+                if (num == num4 || num == "4")
+                {
+                    valid = false;
+                    break;
+                }
+
+            }
+            if (valid == true)
+            {
+                Console.WriteLine("Your number is happy");
+            }
+            else
+            {
+                Console.WriteLine("Your number is sad");
+            }
+            //works for happy nums
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 }
